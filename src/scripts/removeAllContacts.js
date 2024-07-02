@@ -1,11 +1,19 @@
+import fs from 'node:fs/promises';
+import { PATH_DB } from '../constants/todos.js';
 
+export const removeAllTodos = async () => {
+  try {
+    const fileContent = await fs.readFile(PATH_DB, 'utf8');
+    const todos = JSON.parse(fileContent);
 
-removeAllContacts();
-const fs = require('fs');
-const { PATH_DB } = require('../constants/contacts');
+    todos.length = 0;
 
-function removeAllContacts() {
-  fs.writeFileSync(PATH_DB, JSON.stringify([], null, 2));
-}
+    await fs.writeFile(PATH_DB, JSON.stringify(todos, null, 2), 'utf8');
 
-module.exports = removeAllContacts;
+    console.log('Successfully cleared all todos.');
+  } catch (error) {
+    console.error('Error clearing todos:', error);
+  }
+};
+
+removeAllTodos();

@@ -1,1 +1,86 @@
-[]
+[
+    {
+      "id": "43a9f7c2-9f6d-4c3e-9f4d-234567890123",
+      "name": "Evelyn Rodriguez",
+      "phone": "123-456-7890 x123",
+      "email": "Evelyn.Rodriguez@example.com",
+      "job": "Senior Software Engineer"
+    },
+    {
+      "id": "9f6d43a9-f7c2-4c3e-9f4d-234567890123",
+      "name": "Michael Brown",
+      "phone": "456-789-0123 x456",
+      "email": "Michael.Brown@example.com",
+      "job": "Product Manager"
+    },
+    {
+      "id": "c2f7c2f7-c2f7-c2f7-c2f7-c2f7c2f7c2f7",
+      "name": "Emily Davis",
+      "phone": "789-012-3456 x789",
+      "email": "Emily.Davis@example.com",
+      "job": "Marketing Specialist"
+    },
+    {
+      "id": "f7c2f7c2-f7c2-f7c2-f7c2-f7c2f7c2f7c2",
+      "name": "William Lee",
+      "phone": "901-234-5678 x901",
+      "email": "William.Lee@example.com",
+      "job": "Sales Representative"
+    },
+    {
+      "id": "c2f7c2f7-c2f7-c2f7-c2f7-c2f7c2f7c2f7",
+      "name": "Sarah Taylor",
+      "phone": "234-567-8901 x234",
+      "email": "Sarah.Taylor@example.com",
+      "job": "Human Resources Manager"
+    },
+    {
+      "id": "f7c2f7c2-f7c2-f7c2-f7c2-f7c2f7c2f7c2",
+      "name": "James Wilson",
+      "phone": "567-890-1234 x567",
+      "email": "James.Wilson@example.com",
+      "job": "IT Support Specialist"
+    },
+    {
+      "id": "43a9f7c2-9f6d-4c3e-9f4d-234567890123",
+      "name": "Jessica Martin",
+      "phone": "890-123-4567 x890",
+      "email": "Jessica.Martin@example.com",
+      "job": "Financial Analyst"
+    },
+    {
+      "id": "9f6d43a9-f7c2-4c3e-9f4d-234567890123",
+      "name": "Kevin White",
+      "phone": "123-456-7890 x123",
+      "email": "Kevin.White@example.com",
+      "job": "Operations Manager"
+    },
+    {
+      "id": "c2f7c2f7-c2f7-c2f7-c2f7-c2f7c2f7c2f7",
+      "name": "Lisa Nguyen",
+      "phone": "456-789-0123 x456",
+      "email": "Lisa.Nguyen@example.com",
+      "job": "Graphic Designer"
+    },
+    {
+      "id": "f7c2f7c2-f7c2-f7c2-f7c2-f7c2f7c2f7c2",
+      "name": "Brian Hall",
+      "phone": "789-012-3456 x789",
+      "email": "Brian.Hall@example.com",
+      "job": "Software Engineer"
+    },
+    {
+      "id": "43a9f7c2-9f6d-4c3e-9f4d-234567890123",
+      "name": "Amanda Garcia",
+      "phone": "901-234-5678 x901",
+      "email": "Amanda.Garcia@example.com",
+      "job": "Customer Service Representative"
+    },
+    {
+      "id": "9f6d43a9-f7c2-4c3e-9f4d-234567890123",
+      "name": "Matthew Thompson",
+      "phone": "234-567-8901 x234",
+      "email": "Matthew.Thompson@example.com",
+      "job": "Data Analyst"
+    }
+]

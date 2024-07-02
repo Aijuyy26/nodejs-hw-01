@@ -1,12 +1,28 @@
-const fs = require('fs');
-const { PATH_DB } = require('../constants/contacts');
+import fs from 'node:fs/promises';
+import { PATH_DB } from '../constants/todos.js';
 
-function removeLastContact() {
-  const contacts = JSON.parse(fs.readFileSync(PATH_DB, 'utf8'));
-  if (contacts.length > 0) {
-    contacts.pop();
-    fs.writeFileSync(PATH_DB, JSON.stringify(contacts, null, 2));
+export const removeLastTodo = async () => {
+  try {
+    const fileContent = await fs.readFile(PATH_DB, 'utf8');
+    const todos = JSON.parse(fileContent);
+
+    if (todos.length === 0) {
+      console.log('No todos to remove.');
+      return;
+    }
+
+    const updatedTodos = todos.slice(0, -1);
+
+    await fs.writeFile(
+      PATH_DB,
+      JSON.stringify(updatedTodos, null, 2),
+      'utf8',
+    );
+
+    console.log('Successfully removed the last todo.');
+  } catch (error) {
+    console.error('Error removing the last todo:', error);
   }
-}
+};
 
-module.exports = removeLastContact;
+removeLastTodo();
