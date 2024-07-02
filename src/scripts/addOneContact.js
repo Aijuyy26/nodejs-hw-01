@@ -1,22 +1,23 @@
 import fs from 'node:fs/promises';
-import { PATH_DB } from '../constants/todos.js';
-import { createFakeTodo } from '../utils/createFakeTodo.js';
+import { PATH_DB } from '../constants/contacts.js';
+import { createFakeContact } from '../utils/createFakeContact.js';
 
-const addOneTodo = async () => {
+const addOneContact = async () => {
   try {
     const fileContent = await fs.readFile(PATH_DB, 'utf8');
-    const todos = JSON.parse(fileContent);
+    
+    const contacts = JSON.parse(fileContent);
 
-    const newTodo = createFakeTodo();
+    const newContact = createFakeContact();
 
-    todos.push(newTodo);
+    contacts.push(newContact);
 
-    await fs.writeFile(PATH_DB, JSON.stringify(todos, null, 2), 'utf8');
+    await fs.writeFile(PATH_DB, JSON.stringify(contacts, null, 2), 'utf8');
 
-    console.log('Successfully added one new todo.');
+    console.log('Successfully added one new contact.');
   } catch (error) {
-    console.error('Error adding one todo:', error);
+    console.error('Error adding one contact:', error);
   }
 };
 
-addOneTodo();
+addOneContact();

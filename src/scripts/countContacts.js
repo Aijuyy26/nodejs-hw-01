@@ -1,11 +1,12 @@
 import fs from 'node:fs/promises';
-import { PATH_DB } from '../constants/todos.js';
+import { PATH_DB } from '../constants/contacts.js';
 
-export const countTodos = async () => {
+export const countContacts = async () => {
   const fileContent = await fs.readFile(PATH_DB, 'utf8');
-  const todos = JSON.parse(fileContent);
+  
+  const contacts = JSON.parse(fileContent);
 
-  return todos.length;
+  return contacts.length;
 };
 
-console.log(await countTodos());
+console.log(await countContacts());

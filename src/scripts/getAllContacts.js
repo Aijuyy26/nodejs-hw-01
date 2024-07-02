@@ -1,21 +1,21 @@
 import fs from 'node:fs/promises';
-import { PATH_DB } from '../constants/todos.js';
+import { PATH_DB } from '../constants/contacts.js';
 
-export const getAllTodos = async () => {
+export const getAllContacts = async () => {
   try {
     const fileContent = await fs.readFile(PATH_DB, 'utf8');
     return fileContent;
   } catch (error) {
-    console.error('Error reading todos:', error);
+    console.error('Error reading contacts:', error);
     throw error;
   }
 };
 
 (async () => {
   try {
-    const todos = await getAllTodos();
-    console.log(todos);
+    const contacts = await getAllContacts();
+    console.log(contacts);
   } catch (error) {
-    console.error('Failed to get todos:', error);
+    console.error('Failed to get contacts:', error);
   }
 })();
